@@ -4,12 +4,13 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
 // User model - for authentidcation and author info
-model Example {
+model User {
   id        String   @id @default(cuid())  
   email     String   @unique             
   username  String   @unique
@@ -23,9 +24,6 @@ model Example {
   //Relations
   posts       Post[]
   comments    Comment[]
-  likes       Like[]
-  followers   Follow[] @relation("UserFollows")
-  following   Follow[] @relation("UserFollowers")
 
   @@map("users")
 }
