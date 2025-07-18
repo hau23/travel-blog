@@ -10,10 +10,18 @@ datasource db {
 
 // User model - for authentidcation and author info
 model User {
-  id        String   @id @default(cuid())  
+  id        String   @id @default(cuid()) @unique
   email     String   @unique             
   username  String   @unique
-  name String                       
+  name      String 
+  birthYear Int                      
   age       Int                  
-  createdAt DateTime @default(now())     
+  createdAt DateTime @default(now())  
+
+  // Relations
+  posts Post[]
+  comments Comment[]
+  likes Like[]   
+
+  @@map("users")
 }
