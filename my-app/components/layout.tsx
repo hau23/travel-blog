@@ -14,7 +14,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     // and stacks header, main, and footer vertically.
     <div className="grid grid-cols-6 grid-rows-12 min-h-screen grid-auto-rows-fr">
       <Header /> 
-      <main className="col-span-full w-full row-start-2 row-end-12">
+      <main className="col-span-full row-start-2 row-end-12 grid grid-cols-6">
         {children} 
       </main>
       <Footer /> 
