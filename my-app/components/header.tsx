@@ -3,25 +3,23 @@ import React from 'react';
 import Link from 'next/link'; // For navigation links in Next.js
 
 const Header: React.FC = () => {
-  return (
-    <header className="bg-blue-600 text-white p-4 shadow-md">
-      <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold hover:text-blue-200">
-          My Travel Blog
-        </Link>
-        <nav>
-          <ul className="flex space-x-4">
-            <li>
-              <Link href="/" className="hover:text-blue-200">
-                Home
-              </Link>
-            </li>
-            {/* You'll add more links here later, e.g., for About, Posts */}
-          </ul>
-        </nav>
-      </div>
-    </header>
-  );
+   return (
+      <header className="col-span-full w-full p-4 bg-taupe-50 text-taupe-950 opacity-90">
+         <div className="flex justify-center items-center">
+            <nav className="grid grid-cols-3 gap-x-4 max-w-sm w-full ">
+               <Link href="/" className="rounded-lg  hover:bg-taupe-100 p-4 text-center flex justify-center">
+                  Post
+               </Link>
+               <Link href="/about" className="rounded-lg  hover:bg-taupe-100 p-4 text-center flex justify-center">
+                  About
+               </Link>
+               <Link href="/login" className="rounded-lg hover:bg-taupe-100 p-4 text-center flex justify-center">
+                  Login
+               </Link>
+            </nav>
+         </div>
+      </header>
+   );
 };
 
 export default Header;
