@@ -12,9 +12,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     // This div ensures your layout takes at least the full screen height
     // and stacks header, main, and footer vertically.
-    <div className="grid grid-cols-6 grid-rows-12 min-h-screen grid-auto-rows-fr">
+    <div className="grid grid-cols-6 min-h-screen gap-4">
       <Header /> 
-      <main className="col-span-full w-full row-start-2 row-end-12">
+      <main className="flex-grow container mx-auto px-4 py-8">
         {children} 
       </main>
       <Footer /> 

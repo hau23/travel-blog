@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 @theme {
   --color-taupe-50: #f5ebd8; /* base color */
   --color-taupe-100: #d6cebd;

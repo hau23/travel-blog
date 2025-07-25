@@ -1,12 +1,9 @@
-// pages/_app.tsx
-import '../styles/globals.css'; // Make sure this path is correct for your Tailwind setup
 import type { AppProps } from 'next/app';
-import Layout from '../components/layout'; // Import your Layout component
+import '../styles/globals.css';  
+import Layout from '../components/layout';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    // Your Layout component wraps the current page component (Component).
-    // The content of 'Component' will be passed as 'children' to 'Layout'.
     <Layout>
       <Component {...pageProps} />
     </Layout>
