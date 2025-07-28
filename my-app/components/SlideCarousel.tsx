@@ -27,24 +27,6 @@ const mockPosts: Post[] = [
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHKtdofeXwOrAfMxlIWryX7tB09pcGgOEG_g&s',
   },
 ];
-/*
-export default function RightSidebar() {
-  const [visibleIndex, setVisibleIndex] = useState<number>(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setVisibleIndex((prev) => (prev + 1) % mockPosts.length);
-    }, 3000); // Change post every 4 seconds
-
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <div className="w-full p-4 max-w-sm flex justify-center items-center">
-      <MockPost {...mockPosts[visibleIndex]} />
-    </div>
-  );
-} */
 
 export default function SlideCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
