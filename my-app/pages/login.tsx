@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 
 export default function LoginPage() {
@@ -13,15 +14,15 @@ export default function LoginPage() {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Basic validation
-    if (!email || !password) {
-      setError('Please enter both email and password.');
-      return;
-    }
+  const result = await signIn('credentials', {
+      email,
+      password,
+      redirect: false,
+    });
 
     // Simulated login (replace this with actual backend call)
-    if (email === 'demo@example.com' && password === 'password') {
-      router.push('/dashboard'); // redirect after login
+    if (result?.ok) {
+      router.push('/account'); // redirect after login
     } else {
       setError('Invalid email or password.');
     }
@@ -41,6 +42,7 @@ export default function LoginPage() {
           onChange={(e) => setEmail(e.target.value)}
           className="w-full p-2 border border-gray-300 rounded mb-4"
           placeholder="you@example.com"
+          required
         />
 
         <label className="block mb-2 text-sm font-medium">Password</label>
@@ -50,6 +52,7 @@ export default function LoginPage() {
           onChange={(e) => setPassword(e.target.value)}
           className="w-full p-2 border border-gray-300 rounded mb-6"
           placeholder="••••••••"
+          required
         />
 
         <button
