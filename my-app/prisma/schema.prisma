@@ -10,7 +10,7 @@ datasource db {
 
 // User model - for authentidcation and author info
 model User {
-  id        String   @id @default(cuid())  
+  id        Int   @id @default(autoincrement())  
   name      String                       
   username  String   @unique
   password String
@@ -21,12 +21,12 @@ model User {
 }
 
 model Post {
-  id String @id @default(cuid())
+  id Int @id @default(autoincrement())
   title String
   content String
   imageUrl String? //optional
   published Boolean @default(false)
   author User @relation(fields: [authorId], references: [id])
-  authorId String
+  authorId Int
   createdAt DateTime @default(now())
 }

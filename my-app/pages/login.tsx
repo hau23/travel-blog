@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -14,7 +15,7 @@ export default function LoginPage() {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
 
-  const result = await signIn('credentials', {
+    const result = await signIn('credentials', {
       email,
       password,
       redirect: false,
@@ -61,6 +62,15 @@ export default function LoginPage() {
         >
           Log In
         </button>
+        <div className="flex items-center justify-center col-span-6 bg-gray-100">
+          <p className="text-sm text-center mt-4">
+            Don't have an account?{' '}
+            <Link href="/register" className="text-blue-500 hover:underline">
+              Register here
+            </Link>
+          </p>
+        </div>
+
       </form>
     </div>
   );
