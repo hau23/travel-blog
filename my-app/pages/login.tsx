@@ -64,7 +64,7 @@ export default function LoginPage() {
         </button>
         <div className="flex items-center justify-center col-span-6 bg-gray-100">
           <p className="text-sm text-center mt-4">
-            Don't have an account?{' '}
+            Don&apos;t have an account?{' '}
             <Link href="/register" className="text-blue-500 hover:underline">
               Register here
             </Link>
