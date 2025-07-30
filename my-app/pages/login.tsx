@@ -3,7 +3,13 @@
 import { useState } from 'react';
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
+<<<<<<< HEAD
 import Link from 'next/link';
+=======
+import { AuthOptions } from 'next-auth';
+import Link from 'next/link';
+import { authOptions } from '../app/api/auth/[...nextauth]/route';
+>>>>>>> feature/login
 
 export default function LoginPage() {
   const router = useRouter();
@@ -22,7 +28,11 @@ export default function LoginPage() {
     });
 
     // Simulated login (replace this with actual backend call)
+<<<<<<< HEAD
     if (result?.ok) {
+=======
+    if (authOptions.providers[0]) {
+>>>>>>> feature/login
       router.push('/account'); // redirect after login
     } else {
       setError('Invalid email or password.');
@@ -30,7 +40,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex items-center justify-center col-span-6 bg-gray-100">
+    <div className="flex items-center justify-center flex-col col-span-6 bg-gray-100">
       <form onSubmit={handleLogin} className="bg-white p-8 rounded-lg shadow-md w-full max-w-sm">
         <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
 
@@ -72,6 +82,14 @@ export default function LoginPage() {
         </div>
 
       </form>
+      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-sm">
+        <p className="">
+          Don&apos;t have an account?{' '}
+          <Link href="/register" className="text-blue-500 hover:underline">
+            Register here
+          </Link>
+        </p>
+      </div>
     </div>
   );
 }
