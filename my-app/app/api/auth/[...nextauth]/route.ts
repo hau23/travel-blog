@@ -7,21 +7,6 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import { PrismaClient } from "@prisma/client";
 import { compare } from "bcryptjs";
 
-<<<<<<< HEAD
-// Extend the Session type to include user.id
-declare module "next-auth" {
-  interface Session {
-	user: {
-	  id: string;
-	  name?: string | null;
-	  email?: string | null;
-	  image?: string | null;
-	};
-  }
-}
-
-=======
->>>>>>> feature/login
 const prisma = new PrismaClient();
 
 export const authOptions = {
