@@ -63,6 +63,7 @@ export default function AccountPage() {
       <p>Email: {session.user?.email}</p>
       <p>User ID: {paddedId}</p>
     </div>
+
   )
 }
 
