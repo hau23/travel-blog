@@ -3,13 +3,7 @@
 import { useState } from 'react';
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
-<<<<<<< HEAD
 import Link from 'next/link';
-=======
-import { AuthOptions } from 'next-auth';
-import Link from 'next/link';
-import { authOptions } from '../app/api/auth/[...nextauth]/route';
->>>>>>> feature/login
 
 export default function LoginPage() {
   const router = useRouter();
@@ -28,11 +22,7 @@ export default function LoginPage() {
     });
 
     // Simulated login (replace this with actual backend call)
-<<<<<<< HEAD
     if (result?.ok) {
-=======
-    if (authOptions.providers[0]) {
->>>>>>> feature/login
       router.push('/account'); // redirect after login
     } else {
       setError('Invalid email or password.');
