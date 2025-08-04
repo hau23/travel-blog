@@ -10,7 +10,7 @@ type User = {
   birthday: string;
 };
 
-export default function AccountPage() {
+export default function AccountPage() 
   const [user, setUser] = useState<User | null>(null);
   const [message, setMessage] = useState('');
 
@@ -62,6 +62,7 @@ export default function AccountPage() {
       <h1>Welcome, {session.user?.name}</h1>
       <p>Email: {session.user?.email}</p>
       <p>User ID: {paddedId}</p>
+      <p>Post: {session.post?.post}</p>
     </div>
 
   )
