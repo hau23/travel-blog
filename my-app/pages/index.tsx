@@ -2,8 +2,11 @@
 import React from 'react';
 import type { NextPage } from 'next';
 
+<<<<<<< HEAD
 import SlideCarousel from '../components/SlideCarousel';
 
+=======
+>>>>>>> feature/header
 const HomePage: NextPage = () => {
    return (
       <>
@@ -24,9 +27,13 @@ const HomePage: NextPage = () => {
             </div>
          </div>
          <div className="bg-taupe-50 h-full col-span-3">
+<<<<<<< HEAD
             <div className="h-full flex flex-col justify-center items-center p-5">
                <SlideCarousel />
             </div>
+=======
+
+>>>>>>> feature/header
          </div>
       </>
    );
