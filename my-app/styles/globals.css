@@ -1,8 +1,5 @@
 @import "tailwindcss";
-<<<<<<< HEAD
 @plugin "tailwindcss-motion";
-=======
->>>>>>> feature/header
 
 @theme {
   --color-taupe-50: #f5ebd8; /* base color */

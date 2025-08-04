@@ -34,7 +34,7 @@ export async function POST(req: Request) {
     data: {
       title,
       content,
-      authorId: session.user.id
+      authorId: Number(session.user.id)
     }
   })
 
