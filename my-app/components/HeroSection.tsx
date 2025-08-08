@@ -1,12 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
+import SlideCarousel from './SlideCarousel';
 
 const HeroSection: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-br from-white via-taupe-50 to-taupe-100 min-h-screen flex items-center">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiM5OTkiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=')]"></div>
+        <div className="absolute inset-0"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -60,16 +61,16 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column - Visual */}
+          {/* Right Column - Carousel */}
           <div className="relative">
             <div className="relative z-10">
-              {/* Main Image Placeholder */}
-              <div className="bg-gradient-to-br from-taupe-300 to-taupe-500 rounded-2xl p-8 shadow-2xl">
-                <div className="aspect-square rounded-xl bg-taupe-200 flex items-center justify-center">
-                  <svg className="w-24 h-24 text-taupe-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
+              {/* Carousel Container */}
+              <div className="bg-gradient-to-br from-taupe-300 to-taupe-500 rounded-2xl p-6 shadow-2xl">
+                <div className="text-center mb-4">
+                  <h3 className="text-xl font-semibold text-taupe-900 mb-2">Featured Stories</h3>
+                  <p className="text-sm text-taupe-700">Discover amazing destinations</p>
                 </div>
+                <SlideCarousel />
               </div>
 
               {/* Floating Elements */}

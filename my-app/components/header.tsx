@@ -11,7 +11,7 @@ const Header: React.FC = () => {
           <div className="flex items-center gap-2">
             <span className="text-2xl">🌍</span>
             <Link href="/" className="text-2xl font-extrabold text-taupe-900 hover:text-taupe-700 transition-colors tracking-tight">
-              TravelTales
+              Travel Tales
             </Link>
           </div>
 
@@ -19,9 +19,9 @@ const Header: React.FC = () => {
           <nav className="hidden md:flex space-x-8">
             {[
               { href: "/post", label: "Post" },
-              { href: "/about", label: "About" },
               { href: "/login", label: "Login" },
               { href: "/account", label: "Account" },
+              { href: "/about", label: "About" },
             ].map((item) => (
               <Link
                 key={item.href}
