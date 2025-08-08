@@ -10,7 +10,7 @@ const HeroSection: React.FC = () => {
         <div className="absolute inset-0"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 pb-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
           <div className="space-y-8">
@@ -80,28 +80,23 @@ const HeroSection: React.FC = () => {
                   <span className="text-sm font-medium text-taupe-700">Live Stories</span>
                 </div>
               </div>
-
-              <div className="absolute -bottom-4 -left-4 bg-taupe-50 rounded-lg p-4 shadow-lg border border-taupe-200">
-                <div className="flex items-center space-x-2">
-                  <svg className="w-5 h-5 text-taupe-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  <span className="text-sm font-medium text-taupe-700">Global Community</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <div className="flex flex-col items-center space-y-2">
-          <span className="text-sm text-taupe-600 font-medium">Scroll to explore</span>
-          <div className="w-6 h-10 border-2 border-taupe-300 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-taupe-500 rounded-full mt-2 animate-bounce"></div>
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2">
+        <div className="flex flex-col items-center space-y-3">
+          <div className="relative group">
+            <span className="absolute inset-0 rounded-full bg-taupe-400/30 animate-ping"></span>
+            <span className="relative flex items-center justify-center w-16 h-16 rounded-full bg-white/90 backdrop-blur border border-taupe-300 shadow-2xl transition-transform group-hover:scale-105">
+              <svg className="w-8 h-8 text-taupe-700 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </span>
           </div>
+          <span className="text-base text-taupe-700 font-semibold tracking-wide animate-pulse">Scroll to explore</span>
         </div>
       </div>
     </section>
