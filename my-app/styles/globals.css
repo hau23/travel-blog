@@ -1,17 +1,17 @@
 @import "tailwindcss";
-<<<<<<< HEAD
 @plugin "tailwindcss-motion";
-=======
->>>>>>> feature/header
 
 @theme {
-  --color-taupe-50: #f5ebd8; /* base color */
-  --color-taupe-100: #d6cebd;
-  --color-taupe-200: #b8b0a2;
-  --color-taupe-300: #999387;
-  --color-taupe-500: #7a756c;
-  --color-taupe-700: #5c5851;
-  --color-taupe-900: #3d3b36;
-  --color-taupe-950: #1f1d1b;
+  --color-taupe-50: #faf9f7; /* base color */
+  --color-taupe-100: #f5f3f0;
+  --color-taupe-200: #ebe7e2;
+  --color-taupe-300: #dcd6cf;
+  --color-taupe-400: #c8beb4;
+  --color-taupe-500: #b3a595;
+  --color-taupe-600: #9f8c7a;
+  --color-taupe-700: #8a7563;
+  --color-taupe-800: #726051;
+  --color-taupe-900: #5d4e42;
+  --color-taupe-950: #3a2f28;
 }
 

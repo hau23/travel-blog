@@ -2,39 +2,28 @@
 import React from 'react';
 import type { NextPage } from 'next';
 
-<<<<<<< HEAD
 import SlideCarousel from '../components/SlideCarousel';
 
-=======
->>>>>>> feature/header
 const HomePage: NextPage = () => {
    return (
       <>
-         {/* This is the content that will be rendered inside the <main> tag of your Layout. */}
-         <div className="bg-taupe-50 h-full col-span-3 flex flex-row">
-            <div className="h-full flex flex-col justify-center items-center p-8">
-               <h1 className="text-6xl font-extrabold text-gray-900 mb-4">
-                  A place where you share your dearest memories
-               </h1>
-               <p className="text-lg text-gray-700 mb-6">
-                  Embark on a journey through captivating stories and breathtaking destinations.
-                  Start exploring now!
-               </p>
-               {/* You can add a button, image, or list of recent posts here */}
-               <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                  Explore Posts
-               </button>
+         {/* Featured Content Section */}
+         <section className="bg-taupe-50 py-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+               <div className="text-center mb-12">
+                  <h2 className="text-4xl font-bold text-taupe-900 mb-4">
+                     Featured Stories
+                  </h2>
+                  <p className="text-lg text-taupe-700 max-w-2xl mx-auto">
+                     Discover the latest travel adventures and inspiring journeys from our community
+                  </p>
+               </div>
+               
+               <div className="bg-white rounded-2xl shadow-lg p-8">
+                  <SlideCarousel />
+               </div>
             </div>
-         </div>
-         <div className="bg-taupe-50 h-full col-span-3">
-<<<<<<< HEAD
-            <div className="h-full flex flex-col justify-center items-center p-5">
-               <SlideCarousel />
-            </div>
-=======
-
->>>>>>> feature/header
-         </div>
+         </section>
       </>
    );
 };

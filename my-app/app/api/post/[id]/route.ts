@@ -35,7 +35,7 @@ export async function POST(req: Request) {
 	const newPost = await createPost({
 		title,
 		content,
-		authorId: session.user.id,
+		authorId: Number(session.user.id),
 	});
 
 	return Response.json(newPost);
